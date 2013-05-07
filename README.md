@@ -9,13 +9,17 @@ Step events can be used for validation handling of particular steps. There are a
 
 ## Basic HTML structure
 
+Stepper works with both <a> and <button> elements for control of the flow.
+
 ```html
 <div class="stepper-steps">
     <div class="stepper-step step-1">
 	    <!-- step1 content -->
+	    <button type="submit" class="switch-step" data-step="2">Go to next step</button>
     </div>
     <div class="stepper-step step-2">
 	    <!-- step2 content -->
+	    <button type="submit" class="switch-step" data-step="3">Go to next step</button>
     </div>
     <div class="stepper-step step-3">
 	    <!-- step3 content -->
@@ -45,4 +49,12 @@ var stepper = stepper();
 $(function(){
     stepper.init({ maxSteps: 3 });
 })
+```
+
+### Additional options:
+ * startStep: which step should be shown first
+ * itemActiveClass: CSS class for highlighting of the menu item (if menu present), default: "active"
+
+```js
+    stepper.init({ maxSteps: 3, startStep: 1, itemActiveClass: "active-item" });
 ```
