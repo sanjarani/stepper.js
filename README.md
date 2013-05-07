@@ -41,7 +41,9 @@ Stepper works with both <a> and <button> elements for control of the flow.
 
 Menu items are automatically highlighted depending on the active step.
 
-## Initialisation
+## Configuration
+
+### Initialisation
 
 ```js
 var stepper = stepper();
@@ -51,10 +53,22 @@ $(function(){
 })
 ```
 
-### Additional options:
+### Additional options
  * startStep: which step should be shown first
  * itemActiveClass: CSS class for highlighting of the menu item (if menu present), default: "active"
 
 ```js
-    stepper.init({ maxSteps: 3, startStep: 1, itemActiveClass: "active-item" });
+stepper.init({ maxSteps: 3, startStep: 1, itemActiveClass: "active-item" });
+```
+
+### Adding callbacks
+
+```js
+stepper.addCallback(1, function(){
+    //some code here...
+}, "after");
+
+stepper.addGlobalCallback(function(_step, nextStep){
+    //some code here...
+}, "after");
 ```
