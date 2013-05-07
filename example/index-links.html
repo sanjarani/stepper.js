@@ -10,17 +10,19 @@
     <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.min.js"></script>
     <script src="../lib/stepper.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-
+    <style type="text/css">
+        a.active {background: blue }
+    </style>
 </head>
 
 <body>
 
 <ul class="breadcrumb">
-    <li><button class="stepper-menu switch-step" data-step="prev">&lt;</button></li>
-    <li><button class="stepper-menu switch-step" data-step="1">Step 1</button></li>
-    <li><button class="stepper-menu switch-step" data-step="2">Step 2</button></li>
-    <li><button class="stepper-menu switch-step" data-step="3">Step 3</button></li>
-    <li><button class="stepper-menu switch-step" data-step="next">&gt;</button></li>
+    <li><a class="stepper-menu switch-step" data-step="prev">&lt;</a></li>
+    <li><a class="stepper-menu switch-step" data-step="1">Step 1</a></li>
+    <li><a class="stepper-menu switch-step" data-step="2">Step 2</a></li>
+    <li><a class="stepper-menu switch-step" data-step="3">Step 3</a></li>
+    <li><a class="stepper-menu switch-step" data-step="next">&gt;</a></li>
 </ul>
 
 <div class="stepper-steps">
@@ -33,7 +35,7 @@
                     <input id="name" type="text" placeholder="Type name">
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary switch-step" data-step="2">Go to next step</button>
+            <a class="btn btn-primary switch-step" data-step="2">Go to next step</a>
         </fieldset>
     </div>
     <div class="stepper-step step-2">
@@ -48,7 +50,7 @@
                 <option value="contemporary">Contemporary</option>
             </select>
             </div>
-            <button type="submit" class="btn btn-primary switch-step" data-step="3">Go to final step</button>
+            <a class="btn btn-primary switch-step" data-step="3">Go to final step</a>
         </fieldset>
     </div>
     <div class="stepper-step step-3">
@@ -57,7 +59,7 @@
             <label>Agreement</label>
             <p>Some agreement content</p>
 
-            <button type="submit" class="btn btn-primary switch-step" data-step="4">Finish</button>
+            <a type="submit" class="btn btn-primary switch-step" data-step="4">Finish</a>
         </fieldset>
     </div>
 </div>
@@ -66,7 +68,7 @@
     var stepper = stepper();
 
     $(function(){
-        stepper.init({ maxSteps: 3, startStep: 1, itemActiveClass: "btn-info" });
+        stepper.init({ maxSteps: 3, startStep: 1 });
 
         stepper.addCallback(1, function(){
             if($("#name").val() == ""){
