@@ -11,6 +11,8 @@ Step events can be used for validation handling of particular steps. There are a
 
 Stepper works with both a and button HTML elements for control of the flow.
 
+### Steps
+
 ```html
 <div class="stepper-steps">
     <div class="stepper-step step-1">
@@ -27,7 +29,7 @@ Stepper works with both a and button HTML elements for control of the flow.
 </div>
 ```
 
-## Menu (optional)
+### Menu (optional)
 
 ```html
 <ul>
