@@ -9,7 +9,7 @@ Step events can be used for validation handling of particular steps. There are a
 
 ## Basic HTML structure
 
-Stepper works with both <a> and <button> elements for control of the flow.
+Stepper works with both a and button HTML elements for control of the flow.
 
 ```html
 <div class="stepper-steps">
