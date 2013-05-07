@@ -5,6 +5,7 @@ JQuery-based setup stepper
 ## Description
 
 This simple JavaScript library allows to divide form into multiple steps. Each step can have specific event attached that executes before or after transition to it.
+Step events can be used for validation handling of particular steps. There are also global events (before and after transition) that can be used for initialising and effects.
 
 ## Basic HTML structure
 
@@ -35,3 +36,13 @@ This simple JavaScript library allows to divide form into multiple steps. Each s
 ```
 
 Menu items are automatically highlighted depending on the active step.
+
+## Initialisation
+
+```js
+var stepper = stepper();
+
+$(function(){
+    stepper.init({ maxSteps: 3 });
+})
+```
